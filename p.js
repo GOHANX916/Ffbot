@@ -164,7 +164,7 @@ bot.start(async (ctx) => {
   }
   
   // Introduce the bot with two JOIN buttons.
-  const introMessage = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐓𝐡𝐞 𝐅𝐢𝐫𝐬𝐭 𝐀𝐢🌐 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐛𝐨𝐭 𝐅𝐨𝐫 𝐅𝐫𝐞𝐞 𝐅𝐢𝐫𝐞. 𝐋𝐨𝐭𝐬 𝐨𝐟 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐚𝐜𝐜𝐞𝐬𝐬 𝐇𝐞𝐫𝐞🌋 𝐎𝐖𝐍𝐄𝐑 @L1GENDFF.";
+  const introMessage = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐓𝐡𝐞 𝐅𝐢𝐫𝐬𝐭 𝐀𝐢🌐 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐛𝐨𝐭 𝐅𝐨𝐫 𝐅𝐫𝐞𝐞 𝐅𝐢𝐫𝐞. 𝐋𝐨𝐭𝐬 𝐨𝐟 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐚𝐜𝐜𝐞𝐬𝐬 𝐇𝐞𝐫𝐞🌋 𝐎𝐖𝐍𝐄𝐑@L1GENDFF.";
   ctx.reply(
     introMessage,
     Markup.inlineKeyboard([
@@ -252,7 +252,7 @@ bot.command('ai', async (ctx) => {
 bot.hears('ℹ️ 𝑪𝑯𝑬𝑪𝑲 𝑰𝑵𝑭𝑶', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   if (user.balance < COSTS.CHECK_INFO) {
-    return ctx.reply('❌ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴏɪɴᴛꜱ ᴛᴏ ᴄʜᴇᴄᴋ ɪɴꜰᴏ.');
+    return ctx.reply('❌ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴏɪɴᴛꜱ ᴛᴏ ᴄʜᴇᴄᴋ ɪɴꜰᴏ. ꜰɪʀꜱᴛ ᴇᴀʀɴ ᴘᴏɪɴᴛꜱ ʙʏ REFFERAL ᴏʀ   ʏᴏᴜ ᴄᴀɴ ʙᴜʏ ᴘᴏɪɴᴛꜱ ɪɴ ʙᴜʟᴋ ᴛᴏ BUY ᴄᴏɴᴛᴀᴄᴛ @L1GENDFF.');
   }
   user.balance -= COSTS.CHECK_INFO;
   updateUserBalance(user.id, user.balance);
@@ -309,7 +309,7 @@ bot.hears('🤝 𝑺𝑷𝑨𝑴 𝑭𝑹𝑰𝑬𝑵𝑫 𝑹𝑬𝑸𝑼𝑬�
 
 bot.hears('💰 𝑩𝑨𝑳𝑨𝑵𝑪𝑬', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
-  ctx.reply(`Your current balance is: ${user.balance} points.`);
+  ctx.reply(`Your current balance is: ${user.balance} points,  ꜰɪʀꜱᴛ ᴇᴀʀɴ ᴘᴏɪɴᴛꜱ ʙʏ REFFERAL ᴏʀ   ʏᴏᴜ ᴄᴀɴ ʙᴜʏ ᴘᴏɪɴᴛꜱ ɪɴ ʙᴜʟᴋ ᴛᴏ BUY ᴄᴏɴᴛᴀᴄᴛ @L1GENDFF`);
 });
 
 bot.hears('🔗 𝑹𝑬𝑭𝑬𝑹𝑹𝑨𝑳', requireJoin, (ctx) => {
