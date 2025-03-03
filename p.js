@@ -122,7 +122,7 @@ async function checkJoin(ctx) {
   try {
     const member = await ctx.telegram.getChatMember(CHANNEL1, ctx.from.id);
     if (member.status === 'left' || member.status === 'kicked') {
-      await ctx.reply(`🚫 Please JOIN ALL CHANNELS first: https://t.me/freefirehacksantiban`);
+      await ctx.reply(`🚫 𝑷𝒍𝒆𝒂𝒔𝒆 𝑱𝑶𝑰𝑵 𝑨𝑳𝑳 𝑪𝑯𝑨𝑵𝑵𝑬𝑳𝑺 𝒇𝒊𝒓𝒔𝒕: https://t.me/freefirehacksantiban`);
       return false;
     }
     return true;
@@ -164,7 +164,7 @@ bot.start(async (ctx) => {
   }
   
   // Introduce the bot with two JOIN buttons.
-  const introMessage = "This is The First Ai🌐 powered Telegram bot For Free Fire. Lots of Features you can access Here🌋 OWNER @L1GENDFF.";
+  const introMessage = "𝐓𝐡𝐢𝐬 𝐢𝐬 𝐓𝐡𝐞 𝐅𝐢𝐫𝐬𝐭 𝐀𝐢🌐 𝐩𝐨𝐰𝐞𝐫𝐞𝐝 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐛𝐨𝐭 𝐅𝐨𝐫 𝐅𝐫𝐞𝐞 𝐅𝐢𝐫𝐞. 𝐋𝐨𝐭𝐬 𝐨𝐟 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐲𝐨𝐮 𝐜𝐚𝐧 𝐚𝐜𝐜𝐞𝐬𝐬 𝐇𝐞𝐫𝐞🌋 𝐎𝐖𝐍𝐄𝐑@L1GENDFF.";
   ctx.reply(
     introMessage,
     Markup.inlineKeyboard([
@@ -182,13 +182,13 @@ bot.action('continue', async (ctx) => {
   if (!(await checkJoin(ctx))) return;
   ctx.answerCbQuery();
   ctx.reply(
-    'Welcome! Select an option below 🇮🇳 (For IND server only):',
+    'ᴡᴇʟᴄᴏᴍᴇ! ꜱᴇʟᴇᴄᴛ ᴀɴ ᴏᴘᴛɪᴏɴ ʙᴇʟᴏᴡ🇮🇳 (ꜰᴏʀ ɪɴᴅ ꜱᴇʀᴠᴇʀ ᴏɴʟʏ):',
     Markup.keyboard([
-      ['ℹ️ CHECK INFO', '❤️ LIKES'],
-      ['👀 SEND VISIT', '🔍 SEARCH BY NAME'],
-      ['🚫 CHECK BANNED', '🤝 SPAM FRIEND REQUEST'],
-      ['💰 BALANCE', '🔗 REFERRAL'],
-      ['👤 OWNER']
+      ['ℹ️ 𝑪𝑯𝑬𝑪𝑲 𝑰𝑵𝑭𝑶', '❤️ 𝐋𝐈𝐊𝐄𝐒'],
+      ['👀 𝑺𝑬𝑵𝑫 𝑽𝑰𝑺𝑰𝑻', '🔍 𝗦𝗘𝗔𝗥𝗖𝗛 𝗕𝗬 𝗡𝗔𝗠𝗘'],
+      ['🚫 𝑪𝑯𝑬𝑪𝑲 𝑩𝑨𝑵𝑵𝑬𝑫', '🤝 𝑺𝑷𝑨𝑴 𝑭𝑹𝑰𝑬𝑵𝑫 𝑹𝑬𝑸𝑼𝑬𝑺𝑻'],
+      ['💰 𝑩𝑨𝑳𝑨𝑵𝑪𝑬', '🔗 𝑹𝑬𝑭𝑬𝑹𝑹𝑨𝑳'],
+      ['👤 𝗢𝗪𝗡𝗘𝗥']
     ]).resize()
   );
 });
@@ -218,7 +218,7 @@ bot.hears(/^@everyone\s+(.+)/, async (ctx) => {
 bot.command('users', (ctx) => {
   const users = loadUsers();
   const userCount = users.length;
-  ctx.replyWithMarkdownV2(`🤖 Total Users Using This Bot: *${userCount}*`);
+  ctx.replyWithMarkdownV2(`🤖 ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ ᴜꜱɪɴɢ ᴛʜɪꜱ ʙᴏᴛ: *${userCount}*`);
 });
 
 // /ai command: Query the AI API.
@@ -227,9 +227,9 @@ bot.command('ai', async (ctx) => {
   const parts = ctx.message.text.split(' ');
   const question = parts.slice(1).join(' ');
   if (!question) {
-    return ctx.reply('Please provide a question after the command. For example: /ai What is the meaning of life?');
+    return ctx.reply('ᴘʟᴇᴀꜱᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ǫᴜᴇꜱᴛɪᴏɴ ᴀꜰᴛᴇʀ ᴛʜᴇ ᴄᴏᴍᴍᴀɴᴅ. ꜰᴏʀ ᴇxᴀᴍᴘʟᴇ: /ᴀɪ ᴡʜᴀᴛ ɪꜱ ᴛʜᴇ ᴍᴇᴀɴɪɴɢ ᴏꜰ ʟɪꜰᴇ?');
   }
-  ctx.reply('⏳ Processing your query...');
+  ctx.reply('⏳ ᴘʀᴏᴄᴇꜱꜱɪɴɢ ʏᴏᴜʀ ǫᴜᴇʀʏ....');
   
   const url = `https://deepseek.ytansh038.workers.dev/?question=${encodeURIComponent(question)}`;
   const apiResponse = await fetchApiData(url);
@@ -249,27 +249,27 @@ bot.command('ai', async (ctx) => {
 });
 
 // For all commands below, require join.
-bot.hears('ℹ️ CHECK INFO', requireJoin, (ctx) => {
+bot.hears('ℹ️ 𝑪𝑯𝑬𝑪𝑲 𝑰𝑵𝑭𝑶', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   if (user.balance < COSTS.CHECK_INFO) {
-    return ctx.reply('❌ You do not have enough points to CHECK INFO.');
+    return ctx.reply('❌ ʏᴏᴜ ᴅᴏ ɴᴏᴛ ʜᴀᴠᴇ ᴇɴᴏᴜɢʜ ᴘᴏɪɴᴛꜱ ᴛᴏ ᴄʜᴇᴄᴋ ɪɴꜰᴏ.');
   }
   user.balance -= COSTS.CHECK_INFO;
   updateUserBalance(user.id, user.balance);
   
   userStates[ctx.chat.id] = 'info';
-  ctx.reply('Please enter your User ID:');
+  ctx.reply('𝑷𝒍𝒆𝒂𝒔𝒆 𝒆𝒏𝒕𝒆𝒓 𝒚𝒐𝒖𝒓 𝑼𝒔𝒆𝒓 𝑰𝑫:');
 });
 
-bot.hears('❤️ LIKES', requireJoin, (ctx) => {
+bot.hears('❤️ 𝐋𝐈𝐊𝐄𝐒', requireJoin, (ctx) => {
   userStates[ctx.chat.id] = 'likes';
-  ctx.reply('Please enter your User ID to receive likes:');
+  ctx.reply('𝙋𝙡𝙚𝙖𝙨𝙚 𝙚𝙣𝙩𝙚𝙧 𝙮𝙤𝙪𝙧 𝙐𝙨𝙚𝙧 𝙄𝘿 𝙩𝙤 𝙧𝙚𝙘𝙚𝙞𝙫𝙚 𝙡𝙞𝙠𝙚𝙨:');
 });
 
-bot.hears('👀 SEND VISIT', requireJoin, (ctx) => {
+bot.hears('👀 𝑺𝑬𝑵𝑫 𝑽𝑰𝑺𝑰𝑻', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   if (user.balance < COSTS.SEND_VISIT) {
-    return ctx.reply('❌ You do not have enough points to SEND VISIT.');
+    return ctx.reply('❌ 𝗬𝗼𝘂 𝗱𝗼 𝗻𝗼𝘁 𝗵𝗮𝘃𝗲 𝗲𝗻𝗼𝘂𝗴𝗵 𝗽𝗼𝗶𝗻𝘁𝘀 𝘁𝗼 𝗦𝗘𝗡𝗗 𝗩𝗜𝗦𝗜𝗧.');
   }
   user.balance -= COSTS.SEND_VISIT;
   updateUserBalance(user.id, user.balance);
@@ -278,7 +278,7 @@ bot.hears('👀 SEND VISIT', requireJoin, (ctx) => {
   ctx.reply('Please enter your User ID to send visits:');
 });
 
-bot.hears('🔍 SEARCH BY NAME', requireJoin, (ctx) => {
+bot.hears('🔍 𝗦𝗘𝗔𝗥𝗖𝗛 𝗕𝗬 𝗡𝗔𝗠𝗘', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   if (user.balance < COSTS.SEARCH_BY_NAME) {
     return ctx.reply('❌ You do not have enough points to SEARCH BY NAME.');
@@ -290,12 +290,12 @@ bot.hears('🔍 SEARCH BY NAME', requireJoin, (ctx) => {
   ctx.reply('Please enter the name to search for:');
 });
 
-bot.hears('🚫 CHECK BANNED', requireJoin, (ctx) => {
+bot.hears('🚫 𝑪𝑯𝑬𝑪𝑲 𝑩𝑨𝑵𝑵𝑬𝑫', requireJoin, (ctx) => {
   userStates[ctx.chat.id] = 'banned';
   ctx.reply('Please enter your User ID to check banned status:');
 });
 
-bot.hears('🤝 SPAM FRIEND REQUEST', requireJoin, (ctx) => {
+bot.hears('🤝 𝑺𝑷𝑨𝑴 𝑭𝑹𝑰𝑬𝑵𝑫 𝑹𝑬𝑸𝑼𝑬𝑺𝑻', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   if (user.balance < COSTS.SPAM_FRIEND_REQUEST) {
     return ctx.reply('❌ You do not have enough points to SPAM FRIEND REQUEST.');
@@ -307,12 +307,12 @@ bot.hears('🤝 SPAM FRIEND REQUEST', requireJoin, (ctx) => {
   ctx.reply('Please enter your User ID to spam friend request:');
 });
 
-bot.hears('💰 BALANCE', requireJoin, (ctx) => {
+bot.hears('💰 𝑩𝑨𝑳𝑨𝑵𝑪𝑬', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   ctx.reply(`Your current balance is: ${user.balance} points.`);
 });
 
-bot.hears('🔗 REFERRAL', requireJoin, (ctx) => {
+bot.hears('🔗 𝑹𝑬𝑭𝑬𝑹𝑹𝑨𝑳', requireJoin, (ctx) => {
   const user = getOrCreateUser(ctx);
   ctx.reply(
     `Share this link with new users:\n` +
@@ -322,7 +322,7 @@ bot.hears('🔗 REFERRAL', requireJoin, (ctx) => {
 });
 
 // OWNER option: When clicked, show a "SEE" button linking to the owner's page.
-bot.hears('👤 OWNER', requireJoin, (ctx) => {
+bot.hears('👤 𝗢𝗪𝗡𝗘𝗥', requireJoin, (ctx) => {
   ctx.reply("Now you know who is behind It", Markup.inlineKeyboard([
     [Markup.button.url("SEE", "http://t.me/Legend_X_FF_BOT/Legend_bot")]
   ]));
@@ -411,7 +411,7 @@ bot.on('text', async (ctx) => {
 
   if (state === 'likes') {
     ctx.replyWithMarkdownV2(
-      messagePrefix + cleanedResponse + '\\n\\n📢 *IF YOU WANT LIKES IN BULK CONTACT @L1GENDFF *'
+      messagePrefix + cleanedResponse + '\\n\\n📢 *𝗜𝗙 𝗬𝗢𝗨 𝗪𝗔𝗡𝗧 𝗟𝗜𝗞𝗘𝗦 𝗜𝗡 𝗕𝗨𝗟𝗞 𝗖𝗢𝗡𝗧𝗔𝗖𝗧 @L1GENDFF *'
     );
   } else {
     ctx.replyWithMarkdownV2(messagePrefix + cleanedResponse);
