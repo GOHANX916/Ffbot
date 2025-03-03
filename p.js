@@ -111,7 +111,7 @@ const COSTS = {
 };
 
 // ADMIN ID for broadcasting (replace with your Telegram ID)
-const ADMIN_ID = 123456789;
+const ADMIN_ID = 7479124922;
 
 // Define channels.
 const CHANNEL1 = '@freefirehacksantiban'; // Required channel (public)
