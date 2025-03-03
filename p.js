@@ -411,7 +411,7 @@ bot.on('text', async (ctx) => {
 
   if (state === 'likes') {
     ctx.replyWithMarkdownV2(
-      messagePrefix + cleanedResponse + '\\n\\n📢 *IF YOU WANT LIKES IN BULK CONTACT @Gohan52 @L1GENDFF *'
+      messagePrefix + cleanedResponse + '\\n\\n📢 *IF YOU WANT LIKES IN BULK CONTACT @L1GENDFF *'
     );
   } else {
     ctx.replyWithMarkdownV2(messagePrefix + cleanedResponse);
