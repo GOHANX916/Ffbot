@@ -138,7 +138,7 @@ const COSTS = {
 };
 
 // ADMIN ID for broadcasting and creating codes
-const ADMIN_ID = 5744286333;  // Replace with your ID
+const ADMIN_ID = 7479124922;  // Replace with your ID
 
 // Define channels.
 const CHANNEL1 = '@freefirehacksantiban'; // Required channel (public)
