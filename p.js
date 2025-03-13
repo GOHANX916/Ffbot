@@ -589,7 +589,7 @@ bot.on('text', async (ctx) => {
       });
     }
     const { uid } = userInputs[chatId];
-    const url = `https://freefire-virusteam.vercel.app/ind/visit?key=7day@apivirusteam&uid=${uid}&sl=${input}`;
+    const url = `https://freefire-virusteam.vercel.app/ind/visit?key=vs-5day&uid=${uid}&sl=${input}`;
     
     ctx.reply('⏳ Connecting to server...', {
       reply_to_message_id: ctx.message.message_id
@@ -629,11 +629,11 @@ bot.on('text', async (ctx) => {
       });
     }
     userLikesLog[input] = true;
-    url = `https://freefire-virusteam.vercel.app/ind/likes?key=7day@apivirusteam&uid=${input}`;
+    url = `https://freefire-virusteam.vercel.app/ind/likes?key=vs-5day&uid=${input}`;
     messagePrefix = '✅ *Likes Sent Successfully\\!*\\n\\n';
   }
   else if (state === 'search_name') {
-    url = `https://freefire-virusteam.vercel.app/ind/search?key=7day@apivirusteam&name=${encodeURIComponent(input)}`;
+    url = `https://freefire-virusteam.vercel.app/ind/search?key=vs-5day&name=${encodeURIComponent(input)}`;
     messagePrefix = '🔍 *Search Results:*\n\n';
   }
   else if (state === 'banned') {
@@ -651,7 +651,7 @@ bot.on('text', async (ctx) => {
         reply_to_message_id: ctx.message.message_id
       });
     }
-    url = `https://freefire-virusteam.vercel.app/ind/spamkb?key=7day@apivirusteam&uid=${input}`;
+    url = `https://freefire-virusteam.vercel.app/ind/spamkb?key=vs-5day&uid=${input}`;
     messagePrefix = '✅ *Spam Friend Request Sent Successfully\\!*\\n\\n';
   }
   else {
